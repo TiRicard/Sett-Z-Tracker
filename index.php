@@ -1,0 +1,76 @@
+<?php
+
+require_once './php/bibli_generale.php';
+require_once './php/bibli_SettZTracker.php';
+
+ob_start();
+
+session_start();
+
+affDebutEnseigneEntete('Sett\'s Z Tracker');
+
+echo
+    '<section id="updateLevel-container">',
+        '<button id="level-up"></button>',
+        '<div id="level-container">',
+            '<div id="level"></div>',
+        '</div>',
+        '<button id="level-down" class="inv"></button>',
+    '</section>',
+    '<section id="level-ability-container">',
+        '<button id="upgradeZ" class="gradeZ"></button>',
+        '<div class="icon-Z">',
+            '<img src="./images/settW.png" alt="Img Z Spell" id="spell"/>',
+            '<img src="./images/contour-ability.png" alt="contour Z Spell" id="contour"/>',
+        '</div>',
+        '<div id="rank-spell-container">',
+            '<img src="./images/spell-rank.png" alt="spell rank" class="spell-rank active"/>',
+            '<img src="./images/spell-rank-missing.png" alt="spell-rank-missing" class="spell-rank"/>',
+            '<img src="./images/spell-rank-missing.png" alt="spell-rank-missing" class="spell-rank"/>',
+            '<img src="./images/spell-rank-missing.png" alt="spell-rank-missing" class="spell-rank"/>',
+            '<img src="./images/spell-rank-missing.png" alt="spell-rank-missing" class="spell-rank"/>',
+        '</div>',
+        '<button id="downgradeZ" class="gradeZ inv"></button>',
+    '</section>',
+    '<section id="ability-bar-container">',
+        '<div class="health-container" id="healthContainer">',
+            '<div class="health-bar" id="healthBar"></div>',
+        '</div>',
+        '<div class="grit-container" id="gritContainer">',
+            '<div class="grit-bar" id="gritBar"></div>',
+        '</div>',
+        '<div id="updateValGrit"></div>',
+        '<div id="updateValHealth"></div>',
+    '</section>',
+    '<section id="items-container">',
+        '<div id="item-bar">',
+            '<button class="item-case"></button>',
+            '<button class="item-case"></button>',
+            '<button class="item-case"></button>',
+            '<button class="item-case"></button>',
+            '<button class="item-case"></button>',
+            '<button class="item-case"></button>',
+        '</div>',
+        '<button id="shop-button"></button>',
+    '</section>',
+    '<section id="runes-container">',
+        '<div id="conqueror-stack">',
+            '<div id="hConq">Stack de Conqueror</div>',
+            '<button id="sub-button"></button>',
+            '<div id="conqueror"></div>',
+            '<button id="add-button"></button>',
+            '<input id="stack-container" type="number" min="0" max="12" />',
+        '</div>',
+        '<div id="rune-activable">',
+            '<div id="hConq">Activable / Désactivable</div>',
+            '<button id="last-stand"></button>',
+            '<button class="ad-shard"></button>',
+            '<button class="ad-shard"></button>',
+            '<button id="pv-shard"></button>',
+            '<p class="stat-shard-ad">5,4 AD</p>',
+            '<p class="stat-shard-ad">5,4 AD</p>',
+            '<p class="stat-shard-pv">65 PV</p>',
+        '</div>',
+    '</section>',
+    '<button id="uwwha-button"></button>';
+affPiedFin();
